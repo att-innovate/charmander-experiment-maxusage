@@ -1,0 +1,7 @@
+{
+    "id": "cpufixed",
+    "dockerimage": "cpufixed",
+    "mem": "20",
+    "reshuffleable": true,
+    "nodetype": "lab"
+}

@@ -1,0 +1,4 @@
+{
+    "dockerimage": "stress",
+    "nodetype": "lab"
+}
