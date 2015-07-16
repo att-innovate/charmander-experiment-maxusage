@@ -4,7 +4,7 @@ Charmander-Experiment: Maxusage
 Our MaxUsage-Experiment will analyze the actual memory usage of a running simulators and use that result to overwrite
 the memory-allocation for subsequent run-requests for the same simulators.
 
-#### Perquisite
+#### Prerequisite
 A local Charmander cluster has to be up and running.
 Related documentation available on at [https://github.com/att-innovate/charmander](https://github.com/att-innovate/charmander).
 
