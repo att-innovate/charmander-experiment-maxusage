@@ -6,21 +6,21 @@ the memory-allocation for subsequent run-requests for the same simulators.
 
 #### Prerequisite
 A local Charmander cluster has to be up and running.
-Related documentation available on at [https://github.com/att-innovate/charmander](https://github.com/att-innovate/charmander).
+Related documentation available at [https://github.com/att-innovate/charmander](https://github.com/att-innovate/charmander).
 
 Change your working directory to your local Charmander installation, and reset the Charmander cluster.
 
 	cd charmander
 	./bin/reset_cluster
 
-Verify that no task is using the Mesos console at [http://172.31.1.11:5050](http://172.31.1.11:5050)
+Verify that no task is running using the Mesos console at [http://172.31.1.11:5050](http://172.31.1.11:5050)
 
 #### Build and deploy the "maxusage" analyzer
-The max-usage Analyzer is implemented in Scala using Spark-Streamning and Spark-SQL.
+The maxusage analyzer is implemented in Scala using Spark-Streamning and Spark-SQL.
 The code is part of this project and can be found at [MaxUsage.scala](https://github.com/att-innovate/charmander-experiment-maxusage/blob/master/analytics/maxusage/src/main/scala/MaxUsage.scala).
 
 One could argue that using Spark to resolve the max memory usage of a simulator is an over-kill .. but hey, we had
-to try out streaming and Spark-SQL .. and we know we can scale it up.
+to try out streaming and Spark-SQL .. and we are certain that we can scale it up if needed.
 
 Lets build it first. Change to the experiments folder and check out the code into a folder called `maxusage`
 
