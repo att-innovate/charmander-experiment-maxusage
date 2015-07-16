@@ -105,3 +105,7 @@ This returns 500 datapoints for the stress simulator.
 #### That's it, let's clean up
 
     ./bin/reset_cluster
+
+..and head back to Charmander
+
+[Homepage](https://github.com/att-innovate/charmander/)
