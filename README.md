@@ -15,7 +15,7 @@ Change your working directory to your local Charmander installation, and reset t
 
 Verify that no task is running using the Mesos console at [http://172.31.1.11:5050](http://172.31.1.11:5050)
 
-#### Build and deploy the "maxusage" analyzer
+#### Build and deploy the simulators and the analyzer
 The maxusage analyzer is implemented in Scala using Spark-Streamning and Spark-SQL.
 The code is part of this project and can be found at [MaxUsage.scala](https://github.com/att-innovate/charmander-experiment-maxusage/blob/master/analytics/maxusage/src/main/scala/MaxUsage.scala).
 
