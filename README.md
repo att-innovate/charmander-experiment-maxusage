@@ -8,7 +8,7 @@ the memory-allocation for subsequent run-requests for the same simulators.
 A local Charmander cluster has to be up and running.
 Related documentation available at [https://github.com/att-innovate/charmander](https://github.com/att-innovate/charmander).
 
-Verify that you are in your local Charmander directory, and reset the Charmander cluster.
+Verify that you are in your local Charmander directory and reset the Charmander cluster.
 
 	./bin/reset_cluster
 
@@ -29,7 +29,7 @@ Lets build it first. Change to the experiments folder and check out the code int
 Change your working directory back to the root of Charmander and start the build process
 
 	cd ..
-    ./experiments/maxusage/bin/build
+	./experiments/maxusage/bin/build
 
 This command builds maxusage, and creates and deploys Docker images for itself and the different load simulators.
 This process will take some time the first time you run it.
@@ -37,18 +37,18 @@ This process will take some time the first time you run it.
 
 #### Start cAdvisor and Analytics-Stack
 
-    ./bin/start_cadvisor
-    ./bin/start_analytics
+	./bin/start_cadvisor
+	./bin/start_analytics
 
 #### Start the different simulators
 
-    ./experiments/maxusage/bin/start_lookbusy200mb
-    ./experiments/maxusage/bin/start_lookbusy80mb
-    ./experiments/maxusage/bin/start_stress60mb
+	./experiments/maxusage/bin/start_lookbusy200mb
+	./experiments/maxusage/bin/start_lookbusy80mb
+	./experiments/maxusage/bin/start_stress60mb
 
 #### Start maxusage
 
-    ./experiments/maxusage/bin/start_maxusage
+	./experiments/maxusage/bin/start_maxusage
 
 #### Verify the experiment setup in Redis
 
@@ -70,7 +70,7 @@ It should be something like _682MB_.
 
 #### Redeploy simulators
 
-    ./bin/reshuffle
+	./bin/reshuffle
 
 This command will kill and restart our running simulators. The Mesos console can be used to see the progress of the _reshuffling_.
 
@@ -90,19 +90,19 @@ To Login: Username/password: both _root_ , hostname: _172.31.2.11_ and port _314
 
 After log in click on "Explore Data" for charmander and execute following queries:
 
-    select memory_usage from machine where hostname='slave1' limit 200
+	select memory_usage from machine where hostname='slave1' limit 200
 
 This returns and shows a histogram based on 200 data points
 
 To get the memory usage for the stress60mb simulator try
 
-    select memory_usage from stats where container_name =~ /stress*/ limit 500
+	select memory_usage from stats where container_name =~ /stress*/ limit 500
 
 This returns 500 datapoints for the stress simulator.
 
 
 #### That's it, let's clean up
 
-    ./bin/reset_cluster
+	./bin/reset_cluster
 
 ..and head back to the Charmander [Homepage](https://github.com/att-innovate/charmander/)
